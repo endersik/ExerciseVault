@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vault.css"/>
+    <title>Exercise Vault</title>
+</head>
+<body>
+    <div class="container">
+        <div class="leftMenu">
+            <input type="text" placeholder="Search..." class="search">
+            <h1>Muscle Groups</h1>
+            <div class="Muscle Groups">
+                <span class="muscle">Chest</span>
+                <span class="muscle">Back</span>
+                <span class="muscle">Legs</span>
+                <span class="muscle">Arms</span>
+                <span class="muscle">Shoulders</span>
+                <span class="muscle">Abs</span>
+            </div>
+            <h1>Difficulty Level</h1>
+            <div class="level">
+                <select id="levels" name="levels">
+                    <option value="light">Light</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="hard">Hard</option>
+                  </select>
+            </div>
+        </div>
+        <div class="content">
+            <div class="exercises">
+                <div class="exercise">
+                    <img src="https://www.spotebi.com/wp-content/uploads/2014/10/push-up-exercise-illustration.jpg" 
+                    alt="Push Up">
+                    <span class="name">Push Up</span>
+                    <span class="level">Moderate</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./vault.js"></script>
+</body>
+</html>
