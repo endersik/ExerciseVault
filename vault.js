@@ -97,10 +97,22 @@ const setCategories = () => {
         })]
 
     categoriesContainer.innerHTML = categories.map( category => 
-    `
-    <span class="category">${category}</span>
-    `
-).join("");
+        `
+        <span class="category">${category}</span>
+        `
+        ).join("");
+
+    // Event listener at the parent object returns the selected child element
+    // (textContent) of the element is assigned to a variable
+    // and is used for filtering 
+    categoriesContainer.addEventListener("click", (e) => {
+        const selectedCategory = e.target.textContent;
+
+        selectedCategory === "All"
+            ? displayExercises(data)
+            : displayExercises(data.filter(item => item.category === selectedCategory))
+    })
+
 };
 
 
