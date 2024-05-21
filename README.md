@@ -2,9 +2,9 @@
 
 ### Description
 >A web application designed to help you find the perfect workout routine. It provides a library of exercises, categorized and searchable for easy browsing.
-<div align-items="center">
-    <img src="Preview/ExVlt_main.png" width=33%>
-    <img src="Preview/ExVlt_srch.png" width=33%>
+<div align="center">
+    <img src="Preview/ExVlt_main.png" width=50%>
+    <img src="Preview/ExVlt_srch.png" width=50%>
 </div>
 
 ### Features
