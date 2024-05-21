@@ -56,6 +56,8 @@ const categoriesContainer = document.querySelector(".categories")
 const difficultyLevels = document.querySelector(".levels")
 const difficultyLevel = document.querySelector(".level")
 
+const diffLevels = ["All", "Light", "Moderate", "Hard"]
+
 
 const displayExercises = (filteredExercises) => {
     exerciseContainer.innerHTML = filteredExercises.map(
@@ -115,6 +117,18 @@ const setCategories = () => {
 
 };
 
+const setDifficulty = () => {
+    difficultyLevels.addEventListener("change", (e) => {
+        const selectedDifficulty = e.target.value.toLowerCase();
+        
+        selectedDifficulty === "all"
+        ? displayExercises(data)
+        : displayExercises(data.filter(item => item.level === selectedDifficulty))
+        console.log(selectedDifficulty)
+    })
+}
 
 
+
+setDifficulty()
 setCategories()
