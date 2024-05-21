@@ -118,7 +118,13 @@ const setCategories = () => {
 };
 
 const setDifficulty = () => {
-    difficultyLevels.addEventListener("change", (e) => {
+    difficultyLevels.innerHTML = diffLevels.map( level => 
+        `
+            <option value="${level}">${level}</option>
+        `
+    )
+
+    difficultyLevels.addEventListener("input", (e) => {
         const selectedDifficulty = e.target.value.toLowerCase();
         
         selectedDifficulty === "all"
