@@ -15,7 +15,7 @@ const data = [
     },
     {
         id:3,
-        name: "plank",
+        name: "Plank",
         img: "https://www.spotebi.com/wp-content/uploads/2014/10/plank-exercise-illustration.jpg",
         level: "moderate",
         muscle: ["abs"]
@@ -65,3 +65,14 @@ const displayExercises = (filteredExercises) => {
 };
 
 displayExercises(data)
+
+searchInput.addEventListener("keyup", (e) => {
+    const value = e.target.value.toLowerCase();
+
+    if(value){
+        displayExercises(data.filter(item => item.name
+                                                .toLowerCase()
+                                                .indexOf(value) !== -1));
+    }
+    else displayExercises(data);
+})
